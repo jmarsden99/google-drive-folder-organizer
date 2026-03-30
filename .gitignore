@@ -1,0 +1,9 @@
+credentials.json
+token.json
+com.joshmarsden.drive-organizer.plist
+organizer.log
+launchd-stdout.log
+launchd-stderr.log
+__pycache__/
+*.pyc
+.env

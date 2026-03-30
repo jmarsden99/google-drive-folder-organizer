@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.drive-organizer</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/env</string>
+        <string>python3</string>
+        <string>/PATH/TO/drive-organizer/organizer.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/PATH/TO/drive-organizer</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>5</integer>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/PATH/TO/drive-organizer/launchd-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/PATH/TO/drive-organizer/launchd-stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+        <key>ANTHROPIC_API_KEY</key>
+        <string>YOUR_ANTHROPIC_API_KEY</string>
+        <key>DRIVE_FOLDER_ID</key>
+        <string>YOUR_GOOGLE_DRIVE_FOLDER_ID</string>
+    </dict>
+</dict>
+</plist>
