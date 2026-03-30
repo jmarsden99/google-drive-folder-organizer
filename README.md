@@ -1,4 +1,4 @@
-# Drive Organizer
+# Drive Organizer - FOR BUSINESSES
 
 Automatically organizes Google Drive files into categorized folders using Claude AI. Scans a Drive folder recursively, sends file names and metadata to Claude for categorization, then moves each file into the appropriate subfolder.
 
