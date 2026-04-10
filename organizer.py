@@ -6,7 +6,7 @@ import logging
 import sys
 from datetime import datetime
 
-from config import ROOT_FOLDER_ID, LOG_FILE, CATEGORIES
+from config import ENABLED, ROOT_FOLDER_ID, LOG_FILE, CATEGORIES
 from drive_client import (
     get_drive_service,
     list_files_in_folder,
@@ -31,6 +31,11 @@ log = logging.getLogger(__name__)
 def run(limit: int = 0):
     log.info("=" * 60)
     log.info("Drive Organizer started at %s", datetime.now().isoformat())
+
+    if not ENABLED:
+        log.info("Organizer is disabled. Set ENABLED = True in config.py to re-enable.")
+        return
+
     if limit:
         log.info("TEST MODE: processing only %d files", limit)
 

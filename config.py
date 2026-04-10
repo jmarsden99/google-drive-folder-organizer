@@ -1,6 +1,9 @@
 import os
 from pathlib import Path
 
+# Master switch — set to True to re-enable the organizer
+ENABLED = False
+
 # Project paths
 PROJECT_DIR = Path(__file__).parent
 CREDENTIALS_FILE = PROJECT_DIR / "credentials.json"
